@@ -38,11 +38,13 @@ toggleButton.addEventListener("click", () => {
       card.style.display = "flex"
     })
     toggleButton.textContent = "Скрыть"
+    toggleButton.classList.add("expanded")
   } else {
     hiddenCards.forEach((card) => {
       card.style.display = "none"
     })
     toggleButton.textContent = "Показать все"
+    toggleButton.classList.remove("expanded")
   }
 })
 

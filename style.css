@@ -196,6 +196,7 @@ a:visited {
   height: 32px;
   border-radius: 1px;
   background-image: url("./img/header/divider-right.svg");
+  margin: 0 10px;
 }
 
 /* Мэйн */
@@ -259,7 +260,9 @@ a:visited {
 }
 .aside-menu__item {
   position: relative;
-  transition: padding 0.3s, opacity 0.3s;
+  transition:
+    padding 0.3s,
+    opacity 0.3s;
   left: 0;
 }
 .aside-menu__item:hover {
@@ -377,7 +380,7 @@ a:visited {
 }
 .main__nav-item {
   display: inline-flex;
-  border: none;
+  /* border: none; */
 }
 .main__nav-link--first {
   width: 233px;
@@ -420,13 +423,14 @@ a:visited {
   border: var(--border);
   background-color: var(--color-white);
   border-radius: var(--border-radius);
-  white-space: nowrap;
-  position: relative;
+  cursor: pointer;
+  /* white-space: nowrap;
+  position: relative; */
 }
 
 .main__content {
-  height: 90px;
-  padding-left: 30px;
+  /* height: 90px; */
+  padding: 0 30px;
 }
 
 .main__read-more {
@@ -438,7 +442,7 @@ a:visited {
   cursor: pointer;
   border: none;
   background-color: var(--color-gray);
-  padding-top: 15px;
+  /* margin-top: 15px; */
   transition-duration: 0.3s;
 }
 .main__read-more::before {
@@ -463,6 +467,7 @@ a:visited {
 }
 .text-content {
   overflow: hidden;
+  margin-bottom: 10px;
 }
 .brand {
   display: block;
@@ -616,11 +621,15 @@ a:visited {
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
-  background-position: 10px 13px;
+  background-position: 5px 13px;
   background-image: url("./img/main/ic-expand.svg");
 }
 .brand__show-hide:hover {
   scale: 110%;
+}
+.brand__show-hide.expanded::before {
+  background-position: -3px 7px;
+  background-image: url("./img/main/ic-expand-up.svg");
 }
 
 @media (min-width: 320px), (max-width: 320px) {
@@ -648,11 +657,11 @@ a:visited {
   .main__content-text {
     width: 288px;
     height: 135px;
-    line-height: 15px;
+    line-height: 18px;
   }
   .text-content {
     width: 288px;
-    height: 90px;
+    height: 105px;
   }
   .content-size__medium-text {
     display: none;
@@ -678,9 +687,11 @@ a:visited {
       rgba(0, 0, 0, 0) 100%
     );
   }
-  /* .card {
-  display: flex;
-} */
+  .card {
+    /*  display: flex; */
+    width: 240px;
+    margin: 0;
+  }
 }
 @media (min-width: 768px) {
   h1 {
@@ -723,7 +734,7 @@ a:visited {
   }
   .main__content-text {
     width: 312px;
-    height: 195px;
+    height: 160px;
     line-height: 19px;
   }
   .main__logo {
@@ -889,9 +900,9 @@ a:visited {
     display: flex;
     width: 240px;
   }
-.hidden-card {
-  width: 240px;
-}
+  .hidden-card {
+    width: 240px;
+  }
   .card:nth-child(n + 7) {
     display: flex;
   }
