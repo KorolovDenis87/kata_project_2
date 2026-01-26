@@ -442,7 +442,6 @@ a:visited {
   cursor: pointer;
   border: none;
   background-color: var(--color-gray);
-  /* margin-top: 15px; */
   transition-duration: 0.3s;
 }
 .main__read-more::before {

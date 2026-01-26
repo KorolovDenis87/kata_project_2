@@ -26,6 +26,7 @@ const swiper = new Swiper(".swiper", {
   },
 })
 
+
 const toggleButton = document.querySelector(".brand__show-hide")
 const hiddenCards = document.querySelectorAll(".hidden-card")
 
