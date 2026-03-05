@@ -1,0 +1,27 @@
+{
+  "name": "kata_project_2",
+  "version": "1.0.0",
+  "description": "https://korolovdenis87.github.io/kata_project_2/",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KorolovDenis87/kata_project_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KorolovDenis87/kata_project_2/issues"
+  },
+  "homepage": "https://github.com/KorolovDenis87/kata_project_2#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^6.0.1"
+  }
+}
