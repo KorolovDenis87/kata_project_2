@@ -1,0 +1,135 @@
+/* Меню навигации */
+.aside-menu {
+  position: fixed;
+  width: 320px;
+  min-height: 100%;
+  opacity: 1;
+  z-index: 2;
+  background-color: var(--color-white);
+  top: 0;
+  left: 0;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  grid-template-rows: auto 1fr auto;
+}
+
+.aside-menu__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.aside-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aside-menu__nav {
+  position: relative;
+  padding-left: 20px;
+}
+.aside-menu__item {
+  position: relative;
+  transition:
+    padding 0.3s,
+    opacity 0.3s;
+  left: 0;
+}
+.aside-menu__item:hover {
+  padding-left: 10px;
+  opacity: 0.5;
+}
+
+.aside-menu__item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 4px;
+  height: 40px;
+  opacity: 0;
+  transition-duration: 0.3s;
+  background-color: #41f6d7;
+  border-radius: 0 7px 7px 0;
+}
+.aside-menu__item:hover::before {
+  opacity: 1;
+  left: -20px;
+}
+
+.aside-menu__link {
+  position: relative;
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.aside-menu__footer {
+  display: block;
+  padding: 20px;
+  justify-content: flex-start;
+  column-gap: 45px;
+}
+.aside-menu__round {
+  display: inline-flex;
+  gap: 15px;
+}
+
+.aside-menu__mail {
+  margin-top: 10px;
+}
+.aside-menu__mail a {
+  color: black;
+
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.aside-menu__phone {
+  margin-top: 10px;
+}
+.aside-menu__phone a {
+  color: black;
+  font-family: TT Lakes;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+/* стилизация кнопок языки */
+
+.aside-menu__lang {
+  position: relative;
+}
+.aside-menu__list-lang {
+  display: inline-flex;
+  list-style: none;
+  justify-content: space-between;
+
+  column-gap: 10px;
+}
+.aside-menu__link-lang {
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  transition-duration: 0.3s;
+}
+.aside-menu__link-lang:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  scale: 1.2;
+}

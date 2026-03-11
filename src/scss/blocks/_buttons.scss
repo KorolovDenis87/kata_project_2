@@ -1,0 +1,108 @@
+.round-icon {
+  position: relative;
+  border-radius: 20px;
+  background-color: #ff3e79;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.round-icon--close:hover,
+.round-icon--call:hover,
+.round-icon--chat:hover,
+.round-icon--profile:hover,
+.round-icon--repair:hover,
+.round-icon--checkstatus:hover,
+.round-icon--search:hover,
+.round-icon--burger:hover,
+.button-next:hover {
+  cursor: pointer;
+  scale: 110%;
+  transition-duration: 0.3s;
+  opacity: 0.7;
+}
+.round-icon--burger {
+  background-image: url('../img/main/burger.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.round-icon--call {
+  background-image: url('../img/header/call.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round-icon--close {
+  background-image: url('../img/main/button-close.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.round-icon--search {
+  background-image: url('../img/main/search.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round-icon--chat {
+  background-image: url('../img/header/chat.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round-icon--profile {
+  background-image: url('../img/header/profile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round-icon--repair {
+  background-image: url('../img/header/repair.svg');
+  background-size: 40px 40px;
+}
+
+.round-icon--checkstatus {
+  background-image: url('../img/header/checkstatus.svg');
+  background-size: 40px 40px;
+}
+.button-next {
+  background-image: url('../img/main/button-next.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-pink);
+  background-color: var(--color-white);
+  border-radius: 20px;
+  top: 5px;
+}
+.button-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0;
+}
+/* .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  width: 240px;
+  margin-bottom: 10px;
+} */
+//изменения
+.swiper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.swiper-pagination {
+  position: relative;
+  z-index: 0;
+}
+.swiper-pagination-bullet-active {
+  background-color: rgba(181, 182, 188, 1);
+}

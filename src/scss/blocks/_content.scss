@@ -1,0 +1,75 @@
+.main__container {
+  position: relative;
+  background-color: var(--color-gray);
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.main__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 304px;
+  height: 40px;
+}
+.main__highlight-main {
+  width: 4px;
+  height: 40px;
+  border-radius: 0 7px 7px 0;
+  margin-right: 15px;
+  background-image: url('../img/main/highlight.svg');
+}
+
+.main__content {
+  /* height: 90px; */
+  padding: 0 30px;
+}
+
+.main__read-more {
+  display: block;
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-gray);
+  transition-duration: 0.3s;
+}
+.main__read-more::before {
+  display: inline-flex;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  background-image: url('../img/main/ic-expand.svg');
+}
+
+.main__read-more:hover {
+  scale: 110%;
+}
+
+.main__content-text {
+  font-family: TT Lakes;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+.text-content {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.brand {
+  display: block;
+  /* padding-bottom: 20px; */
+}
+.equipment {
+  display: block;
+}
+.prices-table {
+  width: 100%;
+  padding: 15px;
+}

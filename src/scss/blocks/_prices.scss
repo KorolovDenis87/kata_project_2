@@ -1,0 +1,22 @@
+.prices-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prices-table th,
+.prices-table td {
+  padding: 16px 24px;
+}
+
+.prices-table tbody tr {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.prices__button {
+  background: #ff3e79;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}

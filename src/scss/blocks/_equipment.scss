@@ -1,0 +1,24 @@
+.repair-equipment {
+  display: flex;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.card-equipment {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--color-white);
+  min-width: 240px;
+  height: 160px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+/* Кнопка внизу справа */
+.repair-equipment .button-next {
+  align-self: flex-end;
+  margin-left: auto;
+}

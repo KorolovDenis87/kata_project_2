@@ -1,0 +1,23 @@
+/* BASE */
+@import './base/variables';
+@import './base/fonts';
+@import './base/reset';
+
+/* BLOCKS */
+@import './blocks/header';
+@import './blocks/navigation';
+@import './blocks/aside-menu';
+@import './blocks/buttons';
+@import './blocks/content';
+@import './blocks/brands';
+@import './blocks/equipment';
+@import './blocks/prices';
+
+/* LAYOUT */
+@import './layout/media';
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}

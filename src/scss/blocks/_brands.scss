@@ -1,0 +1,141 @@
+.brand-title,
+.equipment-title,
+.prices-title {
+  background: linear-gradient(450deg, #f8f8f8 0%, #ffffff 98.61%);
+  border-top: 1px solid #d9fff5;
+}
+.brand-title__text,
+.equipment-title__text,
+.prices-title__text {
+  font-family: TT Lakes;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  padding: 0 10px 10px;
+  margin-left: 20px;
+}
+.brand-repair {
+  // изменения
+  display: none;
+  //display: flex; 
+  //overflow: hidden;
+  flex-wrap: wrap;
+}
+.card/* , .hidden-card */ {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  //min-width: 224px;
+  width: 100%;
+  margin: 0;
+  height: 72px;
+  //margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+.hidden-card {
+  background-color: var(--color-white);
+  display: none;
+  justify-content: space-between;
+  height: 72px;
+  //изменения 
+  width: 224px;
+  /* min-width: 224px;
+  margin: 0 10px; */
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+.brand__show-hide {
+  display: none;
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-gray);
+  transition-duration: 0.3s;
+  margin: 20px 15px;
+  padding: 10px;
+}
+.brand__show-hide::before {
+  display: inline-flex;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 5px 13px;
+  background-image: url('../img/main/ic-expand.svg');
+}
+.brand__show-hide:hover {
+  scale: 110%;
+}
+.brand__show-hide.expanded::before {
+  background-position: -3px 7px;
+  background-image: url('../img/main/icExpandUp.svg');
+}
+.img-card--lenovo {
+  align-items: center;
+  background-image: url('../img/main/lenovo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 108px;
+}
+.img-card--samsung {
+  align-items: center;
+  background-image: url('../img/main/samsung.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 116px;
+}
+.img-card--apple {
+  align-items: center;
+  background-image: url('../img/main/apple.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 44px;
+}
+.img-card--vievSonic {
+  align-items: center;
+  background-image: url('../img/main/VievSonic.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+.img-card--bosch {
+  align-items: center;
+  background-image: url('../img/main/Bosch.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+.img-card--hp {
+  align-items: center;
+  background-image: url('../img/main/HP.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 52px;
+}
+.img-card--acer {
+  align-items: center;
+  background-image: url('../img/main/acer.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 94px;
+}
+.img-card--sony {
+  align-items: center;
+  background-image: url('../img/main/Sony.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+//изменения
+
+.swiper-slide {
+  width: 100%;
+  }
