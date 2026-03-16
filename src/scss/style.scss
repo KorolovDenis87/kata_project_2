@@ -1,17 +1,28 @@
-$bgColor: #24292e;
-$text: #fff;
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
 
-body {
+@import './base/reset.scss';
+@import './base/fonts.scss';
+@import './base/variables.scss';
+
+@import './blocks/aside-menu.scss';
+@import './blocks/brand.scss';
+@import './blocks/card.scss';
+@import './blocks/header.scss';
+@import './blocks/main.scss';
+@import './blocks/round-icon.scss';
+@import './blocks/nav.scss';
+
+@import './components/swiper.scss';
+
+
+
+
+
+
+/* body {
   padding: 1rem;
   margin: 0;
   font-family: Comic, sans-serif;
   background-color: $bgColor;
   color: $text;
-}
+} */

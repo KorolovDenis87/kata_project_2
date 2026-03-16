@@ -1,0 +1,125 @@
+.card/* , .hidden-card */ {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  min-width: 224px;
+  height: 72px;
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+.img-card--lenovo {
+  align-items: center;
+  background-image: url("../img/main/lenovo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 108px;
+}
+.img-card--samsung {
+  align-items: center;
+  background-image: url("../img/main/samsung.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 116px;
+}
+.img-card--apple {
+  align-items: center;
+  background-image: url("../img/main/apple.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 44px;
+}
+.img-card--vievSonic {
+  align-items: center;
+  background-image: url("../img/main/VievSonic.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+.img-card--bosch {
+  align-items: center;
+  background-image: url("../img/main/Bosch.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+.img-card--hp {
+  align-items: center;
+  background-image: url("../img/main/HP.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 52px;
+}
+.img-card--acer {
+  align-items: center;
+  background-image: url("../img/main/acer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 94px;
+}
+.img-card--sony {
+  align-items: center;
+  background-image: url("../img/main/Sony.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 128px;
+}
+
+
+@media (max-width: 320px) {
+  .card {
+    width: 240px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    width: 224px;
+  }
+  .card:nth-child(n + 7) {
+    display: none;
+  }
+}
+
+@media (min-width: 1120px) {
+  .card {
+    display: flex;
+    width: 240px;
+  }
+    .card:nth-child(n + 7) {
+    display: flex;
+  }
+  .card:nth-child(n + 9) {
+    display: none;
+  }
+  .hidden-card {
+    width: 240px;
+  }
+}
+
+.hidden-card {
+  background-color: var(--color-white);
+  display: none;
+  justify-content: space-between;
+  min-width: 224px;
+  height: 72px;
+  margin: 0 10px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+.button-next {
+  background-image: url("../img/main/button-next.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-pink);
+  background-color: var(--color-white);
+  border-radius: 20px;
+  top: 5px;
+}
