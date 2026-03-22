@@ -1,9 +1,6 @@
 .technique {
   display: block;
-  /* padding-bottom: 20px; */
-}
-
-@media (min-width: 768px) {
+  padding-bottom: 20px;
 }
 
 .technique__title {
@@ -23,61 +20,63 @@
 
 .technique__block {
   display: none;
-  flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
   .technique__block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 10px;
+    gap: 10px;
     place-items: center;
   }
 }
 
 @media (min-width: 1120px) {
   .technique__block {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    flex-wrap: wrap;
   }
 }
-/* .technique__card {
-  display: flex;
-  width: 240px;
-height: 160px;
-border-radius: 6px color var(--color-border-brand);
-background-color: var(--color-white);
-margin: 10px;
-} */
 
 .technique__card {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 240px;
+  width: 100%;
   height: 160px;
-  border-radius: 6px color var(--color-border-brand);
+  border-radius: 6px;
+  border: 1px solid var(--color-border-brand);
   background-color: var(--color-white);
-  margin: 10px;
   padding: 0 20px 20px;
-
+  margin: 0;
 
   @media (min-width: 768px) {
     width: 224px;
+    margin: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .technique__card--hidden {
+    display: none;
   }
 
+  .technique__card--hidden.technique__card--opened {
+    display: flex;
+  }
+}
+
+@media (min-width: 1120px) {
+  .technique__card--hidden {
+    display: flex;
+  }
+
+  .technique__show-hide {
+    display: none;
+  }
 }
 
 .technique__card .swiper-buttons {
-  margin-top: 20px
-}
-
-.card-text {
-  
-}
-
-.button-next {
+  margin-top: 20px;
 }
 
 .technique__card .button-next {
@@ -85,4 +84,53 @@ margin: 10px;
   margin-left: auto;
 }
 
+.technique__show-hide {
+  display: none;
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-gray);
+  transition-duration: 0.3s;
+  margin: 20px;
+  padding: 10px;
 
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.technique__show-hide::before {
+  display: inline-flex;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: 5px 13px;
+  background-image: url('../img/main/ic-expand.svg');
+}
+.technique__show-hide:hover {
+  scale: 110%;
+}
+.technique__show-hide.expanded::before {
+  background-position: -3px 7px;
+  background-image: url('../img/main/ic-expand-up.svg');
+}
+
+.technique .swiper {
+  display: block;
+  padding-left: 16px;
+}
+
+@media (min-width: 768px) {
+  .technique .swiper {
+    display: none;
+  }
+}
+
+.technique__swiper .swiper-slide {
+  width: 224px;
+  flex-shrink: 0;
+}
