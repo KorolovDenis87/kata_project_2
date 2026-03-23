@@ -1,0 +1,156 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 9;
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  box-shadow: -16px 0 52px rgba(14, 24, 80, 0.2);
+  z-index: 10;
+  display: none;
+
+  @media (min-width: 769px) {
+    width: 513px;
+  }
+
+  &--opened {
+    display: block;
+  }
+
+  &__close {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+
+    @media (min-width: 769px) {
+      top: 32px;
+      left: -72px;
+    }
+  }
+
+  &__content {
+    padding: 96px 16px 32px;
+
+    @media (min-width: 769px) {
+      padding: 40px 32px 32px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 24px;
+    font-family: TT Lakes;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1b1c21;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -16px;
+      width: 4px;
+      height: 40px;
+      border-radius: 0 7px 7px 0;
+      background-color: #41f6d7;
+
+      @media (min-width: 769px) {
+        left: -32px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 12px 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    font-family: TT Lakes;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    color: #b5b6bc;
+  }
+
+  &__textarea {
+    min-height: 118px;
+    resize: none;
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    font-family: TT Lakes;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7e7e82;
+  }
+
+  &__link {
+    color: var(--color-pink);
+    text-decoration: none;
+  }
+
+  &__button {
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 136px;
+    height: 32px;
+    padding: 0 12px 0 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--color-pink);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__button-text {
+    font-family: TT Lakes;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  &__button-arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/main/order.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+  }
+}

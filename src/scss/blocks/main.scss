@@ -94,12 +94,12 @@
   }
 
   .main__logo {
-    width: 100%;
+    width: 320px;
   }
 
   .main__logo-group {
     display: block;
-    width: 100%;
+    width: 320px;
     height: auto;
     margin-top: 16px;
     margin-bottom: 20px;
@@ -152,6 +152,7 @@
   }
 
   .main__logo-group {
+    display: block;
     width: 360px;
     height: 208px;
     margin-top: 20px;
@@ -247,6 +248,7 @@
   }
 
   .main__logo-group {
+    display: block;
     width: 500px;
     height: 307px;
   }

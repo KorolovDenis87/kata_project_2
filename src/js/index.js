@@ -1,6 +1,6 @@
 import '../scss/style.scss'
 
-console.log('Works!')
+//боковое меню
 
 const openButton = document.getElementById('openButton')
 const closeButton = document.getElementById('closeButton')
@@ -32,6 +32,8 @@ if (overlay && aside) {
   })
 }
 
+//свайпер brand
+
 const brandSwiper = new Swiper('.brand__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -48,6 +50,8 @@ const brandSwiper = new Swiper('.brand__swiper', {
     prevEl: '.brand__button-prev'
   }
 })
+
+//свайпер technique
 
 const techniqueSwiper = new Swiper('.technique__swiper', {
   direction: 'horizontal',
@@ -66,6 +70,8 @@ const techniqueSwiper = new Swiper('.technique__swiper', {
   }
 })
 
+//свайпер price
+
 const priceSwiper = new Swiper('.price__swiper', {
   direction: 'horizontal',
   loop: true,
@@ -82,6 +88,8 @@ const priceSwiper = new Swiper('.price__swiper', {
     prevEl: '.price__button-prev'
   }
 })
+
+//Показать скрыть brand
 
 const toggleButton = document.querySelector('.brand__show-hide')
 const hiddenCards = document.querySelectorAll('.hidden-card')
@@ -105,6 +113,8 @@ toggleButton.addEventListener('click', () => {
   }
 })
 
+//поведение aside при разрешениях
+
 const asideMenu = document.getElementById('myAside')
 
 if (asideMenu && overlay) {
@@ -123,6 +133,8 @@ if (asideMenu && overlay) {
 } else {
   console.error("Элемент с id 'myAside' не найден на странице.")
 }
+
+//показать скрыть technique
 
 const techniqueButton = document.querySelector('.technique__show-hide')
 const hiddenTechniqueCards = document.querySelectorAll(
@@ -148,3 +160,65 @@ if (techniqueButton) {
     }
   })
 }
+
+//модалка
+
+const modalOverlay = document.getElementById('modalOverlay')
+const callModal = document.getElementById('callModal')
+const feedbackModal = document.getElementById('feedbackModal')
+
+const callButtons = document.querySelectorAll('[data-modal="call"]')
+const feedbackButtons = document.querySelectorAll('[data-modal="feedback"]')
+const modalCloseButtons = document.querySelectorAll('.modal__close')
+
+function openModal(modal) {
+  if (!modal || !modalOverlay) return
+
+  modal.classList.add('modal--opened')
+  modalOverlay.style.display = 'block'
+  document.body.style.overflow = 'hidden'
+}
+
+function closeModals() {
+  if (callModal) {
+    callModal.classList.remove('modal--opened')
+  }
+
+  if (feedbackModal) {
+    feedbackModal.classList.remove('modal--opened')
+  }
+
+  if (modalOverlay) {
+    modalOverlay.style.display = 'none'
+  }
+
+  document.body.style.overflow = ''
+}
+
+callButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    closeModals()
+    openModal(callModal)
+  })
+})
+
+feedbackButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    closeModals()
+    openModal(feedbackModal)
+  })
+})
+
+modalCloseButtons.forEach((button) => {
+  button.addEventListener('click', closeModals)
+})
+
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', closeModals)
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModals()
+  }
+})

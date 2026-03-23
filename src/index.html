@@ -27,8 +27,16 @@
         <div class="button-form">
           <!-- Меню справа профильные  -->
           <div class="button-form__profile">
-            <button class="round-icon round-icon--call" type="button"></button>
-            <button class="round-icon round-icon--chat" type="button"></button>
+            <button
+              class="round-icon round-icon--call"
+              type="button"
+              data-modal="call"
+            ></button>
+            <button
+              class="round-icon round-icon--chat"
+              type="button"
+              data-modal="feedback"
+            ></button>
             <button
               class="round-icon round-icon--profile"
               type="button"
@@ -94,8 +102,16 @@
         </nav>
         <footer class="aside-menu__footer">
           <div class="aside-menu__round">
-            <button class="round-icon round-icon--call"></button>
-            <button class="round-icon round-icon--chat"></button>
+            <button
+              class="round-icon round-icon--call"
+              type="button"
+              data-modal="call"
+            ></button>
+            <button
+              class="round-icon round-icon--chat"
+              type="button"
+              data-modal="feedback"
+            ></button>
             <button class="round-icon round-icon--profile"></button>
           </div>
 
@@ -565,6 +581,90 @@
         </footer>
       </div>
     </main>
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal modal--call" id="callModal">
+      <button
+        class="modal__close round-icon round-icon--close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+
+      <div class="modal__content">
+        <h2 class="modal__title">Заказать звонок</h2>
+
+        <form class="modal__form" action="#" method="post">
+          <input
+            class="modal__input"
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+          />
+
+          <p class="modal__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a class="modal__link" href="#">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a class="modal__link" href="#">политикой конфиденциальности</a>
+          </p>
+
+          <button class="modal__button" type="submit">
+            <span class="modal__button-text">Отправить</span>
+            <span class="modal__button-arrow"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal--feedback" id="feedbackModal">
+      <button
+        class="modal__close round-icon round-icon--close"
+        type="button"
+        aria-label="Закрыть"
+      ></button>
+
+      <div class="modal__content">
+        <h2 class="modal__title">Обратная связь</h2>
+
+        <form class="modal__form" action="#" method="post">
+          <input
+            class="modal__input"
+            type="text"
+            name="name"
+            placeholder="Имя"
+          />
+          <input
+            class="modal__input"
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+          />
+          <input
+            class="modal__input"
+            type="email"
+            name="email"
+            placeholder="Электронная почта"
+          />
+          <textarea
+            class="modal__textarea"
+            name="message"
+            placeholder="Сообщение"
+          ></textarea>
+
+          <p class="modal__text">
+            Нажимая “отправить”, вы даете согласие на
+            <a class="modal__link" href="#">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a class="modal__link" href="#">политикой конфиденциальности</a>
+          </p>
+
+          <button class="modal__button" type="submit">
+            <span class="modal__button-text">Отправить</span>
+            <span class="modal__button-arrow"></span>
+          </button>
+        </form>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!-- <script src="script.js"></script> -->
