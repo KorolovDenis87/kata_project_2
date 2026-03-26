@@ -68,57 +68,57 @@ function initMobileSwipers() {
   if (document.querySelector('.brand__swiper')) {
     new Swiper('.brand__swiper', {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       slidesPerView: 'auto',
       spaceBetween: 16,
 
       pagination: {
         el: '.brand__pagination',
         clickable: true
-      },
+      }
 
-      navigation: {
+      /* navigation: {
         nextEl: '.brand__button-next',
         prevEl: '.brand__button-prev'
-      }
+      } */
     })
   }
 
   if (document.querySelector('.technique__swiper')) {
     new Swiper('.technique__swiper', {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       slidesPerView: 'auto',
       spaceBetween: 16,
 
       pagination: {
         el: '.technique__pagination',
         clickable: true
-      },
+      }
 
-      navigation: {
+      /* navigation: {
         nextEl: '.technique__button-next',
         prevEl: '.technique__button-prev'
-      }
+      } */
     })
   }
 
   if (document.querySelector('.price__swiper')) {
     new Swiper('.price__swiper', {
       direction: 'horizontal',
-      loop: true,
+      loop: false,
       slidesPerView: 'auto',
       spaceBetween: 16,
 
       pagination: {
         el: '.price__pagination',
         clickable: true
-      },
+      }
 
-      navigation: {
+      /* navigation: {
         nextEl: '.price__button-next',
         prevEl: '.price__button-prev'
-      }
+      } */
     })
   }
 }

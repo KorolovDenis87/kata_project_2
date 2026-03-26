@@ -1,13 +1,22 @@
 .swiper {
   position: relative;
   width: 100%;
-  height: 100%;
-  margin-bottom: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
 }
 
 .swiper-pagination {
-  position: relative;
-  margin-top: 10px;
+  position: static;
+  margin-top: 16px;
+  text-align: center;
   z-index: 0;
 }
 
@@ -17,13 +26,14 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  opacity: 0;
+  display: none;
 }
 
 @media (min-width: 768px) {
   .swiper {
     display: none;
   }
+
   .swiper-pagination {
     display: none;
   }
